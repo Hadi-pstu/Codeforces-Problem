@@ -14,23 +14,13 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);cout.tie(NULL);
 
-    int i,cnt=0,flag=0;
-    string str;
-    string ans="hello";
-    cin>>str;
-    for(i=0;i<str.length();i++)
+    int a,b,t,ans=0;
+    cin>>t;
+    while(t--)
     {
-        if(str[i]==ans[cnt])
-           cnt++;
-        if(cnt==5)
-        {
-            flag=1;
-            break;
-        }
- 
+        cin>>a>>b;
+        if(b-a>=2)
+           ans++;
     }
-    if(flag==1)
-        cout<<"YES"<<endl;
-    else
-        cout<<"NO"<<endl;
+        cout<<ans;
 }
